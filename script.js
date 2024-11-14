@@ -1,9 +1,10 @@
-var scorern = 0;
+
+var ScoreNow = 0;
 var nt;
 
 function makeBubble() {
     var repeat = "";
-    for (var i = 0; i <= 101; i++) {
+    for (var i = 0; i <= 84; i++) {
         repeat += `<div class="bubble">${Math.floor(Math.random() * 10)}</div>`;
     }
 
@@ -11,8 +12,8 @@ function makeBubble() {
 }
 
 function increaseScore() {
-    scorern += 10;
-    document.querySelector("#score").textContent = scorern;
+    ScoreNow += 10;
+    document.querySelector("#score").textContent = ScoreNow;
 
 }
 
@@ -31,7 +32,7 @@ function runTimer() {
         else {
             clearInterval(timerInt);
             document.querySelector("#pbtm").innerHTML = `<h1>GAME OVER</H1>`;
-            alert(`YOUR SCORE IS ${scorern}`);
+            alert(`YOUR SCORE IS ${ScoreNow}`);
         }
 
     }, 1000)
